@@ -1,7 +1,30 @@
 aid: thrivecom
-name: ThriveCom
-description: ThriveCom is a company surfaced as a portfolio company of 500-global and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/thrivecom.png
+name: RingCaptcha (ThriveCom)
+description: >-
+  RingCaptcha, operated by ThriveCom, is a phone-verification and two-factor
+  authentication (2FA) platform that helps businesses confirm real users and
+  block fraud. It delivers one-time passcodes over SMS, voice, WhatsApp and
+  missed-call (Blink) verification, normalizes and validates phone numbers to
+  E.164, and returns fraud, carrier and device metadata to filter fake signups,
+  bots and spam leads. Developers integrate through a simple form-encoded REST
+  API at api.ringcaptcha.com, authenticated with per-application api_key,
+  secret_key and app_key credentials, plus official client SDKs for Node.js,
+  Python, PHP, Ruby, C#, Android, iOS and WordPress. RingCaptcha was surfaced
+  as a 500 Global portfolio company and profiled through the API Evangelist
+  enrichment pipeline.
 url: https://raw.githubusercontent.com/api-evangelist/thrivecom/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,15 +34,89 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- Two-Factor Authentication
+- Phone Verification
+- One-Time Passcode
+- SMS
+- Voice
+- Fraud Prevention
+- Identity Verification
+- Authentication
+apis:
+- name: RingCaptcha Verification API
+  description: >-
+    Form-encoded REST API for phone verification and OTP: issue a session
+    token, normalize a phone number, send a pincode over SMS or voice, and
+    verify the user-entered code. Responses carry status plus phone, carrier,
+    device, ISP and geolocation metadata.
+  humanURL: https://my.ringcaptcha.com/docs/web
+  baseURL: https://api.ringcaptcha.com
+  properties:
+  - type: Authentication
+    url: authentication/thrivecom-authentication.yml
+  - type: ErrorCatalog
+    url: errors/thrivecom-error-codes.yml
+  - type: Conventions
+    url: conventions/thrivecom-conventions.yml
+  - type: DataModel
+    url: data-model/thrivecom-data-model.yml
+common:
+- type: Website
+  url: https://ringcaptcha.com
+- type: DeveloperPortal
+  url: https://my.ringcaptcha.com/docs/web
+- type: Documentation
+  url: https://my.ringcaptcha.com/docs/web
+- type: APIReference
+  url: https://ringcaptcha.notion.site/Dev-Docs-e2af75c9765349848ad53c8601a8217f
+- type: Blog
+  url: https://blog.ringcaptcha.com
+- type: GitHubOrganization
+  url: https://github.com/ringcaptcha
+- type: Pricing
+  url: https://ringcaptcha.com/plans
+- type: SignUp
+  url: https://my.ringcaptcha.com/login
+- type: Support
+  url: mailto:hello@ringcaptcha.com
+- type: TermsOfService
+  url: https://ringcaptcha.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://ringcaptcha.com/privacy-policy
+- type: Authentication
+  url: authentication/thrivecom-authentication.yml
+- type: ErrorCatalog
+  url: errors/thrivecom-error-codes.yml
+- type: Conventions
+  url: conventions/thrivecom-conventions.yml
+- type: Packages
+  url: packages/thrivecom-packages.yml
+- type: SDKs
+  url: packages/thrivecom-packages.yml
+- type: MCPServer
+  url: mcp/thrivecom-mcp.yml
+- type: LLMsTxt
+  url: llms/thrivecom-llms.txt
+- type: WellKnown
+  url: well-known/thrivecom-well-known.yml
+- type: DomainSecurity
+  url: security/thrivecom-domain-security.yml
+- type: DataModel
+  url: data-model/thrivecom-data-model.yml
+- type: Conformance
+  url: conformance/thrivecom-conformance.yml
+- type: Compliance
+  url: https://ringcaptcha.com/privacy-policy
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-common:
-- type: Website
-  url: https://ringcaptcha.com
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 10
+  pass: local-v1

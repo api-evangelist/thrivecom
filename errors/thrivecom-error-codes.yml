@@ -1,0 +1,28 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/ringcaptcha/ringcaptcha-node (lib/errorCodes.js) + SDK response handling
+docs: https://my.ringcaptcha.com/docs/web
+envelope:
+  description: >-
+    Responses are JSON. A top-level `status` field is `SUCCESS` on success or
+    `ERROR` on failure; failures carry a machine-readable code and a human
+    `message`. Verification responses also surface `id`, `phone`, `phone_type`,
+    `carrierName`, `device`, `isp`, and `geolocation`.
+  status_field: status
+  message_field: message
+error_codes:
+  - code: ERROR_INVALID_APP_KEY
+    meaning: The supplied app_key is incorrect or does not match the domain/application.
+    action: >-
+      Verify the app_key issued in the RingCaptcha dashboard and that it matches
+      the registered application/domain.
+  - code: ERROR_INVALID_SECRET_KEY
+    meaning: The supplied secret_key is incorrect for the application.
+    action: Re-copy the server-side secret_key from the dashboard; keep it server-only.
+  - code: ERROR_INVALID_DOMAIN
+    meaning: >-
+      The request originates from a domain/application not registered for these
+      keys.
+    action: >-
+      Register the calling domain/application in the dashboard, or use keys
+      issued for the correct application.

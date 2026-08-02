@@ -1,0 +1,63 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/ringcaptcha + https://www.npmjs.com
+packages:
+  - language: javascript
+    registry: npm
+    name: ringcaptcha
+    url: https://www.npmjs.com/package/ringcaptcha
+    install: npm install ringcaptcha
+    official: true
+    repo: https://github.com/ringcaptcha/ringcaptcha-node
+  - language: javascript
+    registry: npm
+    name: ringcaptcha-es6
+    url: https://www.npmjs.com/package/ringcaptcha-es6
+    install: npm install ringcaptcha-es6
+    official: true
+  - language: javascript
+    registry: npm
+    name: ringcaptcha-widget
+    url: https://www.npmjs.com/package/ringcaptcha-widget
+    install: npm install ringcaptcha-widget
+    official: true
+    notes: Browser two-step verification widget.
+  - language: python
+    registry: github
+    name: ringcaptcha-python
+    url: https://github.com/ringcaptcha/ringcaptcha-python
+    official: true
+    notes: Not published to PyPI; installed from source.
+  - language: php
+    registry: github
+    name: ringcaptcha-php
+    url: https://github.com/ringcaptcha/ringcaptcha-php
+    official: true
+  - language: ruby
+    registry: github
+    name: ringcaptcha-ruby
+    url: https://github.com/ringcaptcha/ringcaptcha-ruby
+    official: true
+  - language: csharp
+    registry: github
+    name: ringcaptcha-csharp
+    url: https://github.com/ringcaptcha/ringcaptcha-csharp
+    official: true
+  - language: java
+    registry: github
+    name: ringcaptcha-android
+    url: https://github.com/ringcaptcha/ringcaptcha-android
+    official: true
+    notes: Android SDK.
+  - language: objective-c
+    registry: github
+    name: ringcaptcha-ios
+    url: https://github.com/ringcaptcha/ringcaptcha-ios
+    official: true
+    notes: iOS SDK.
+  - language: php
+    registry: github
+    name: ringcaptcha-wordpress
+    url: https://github.com/ringcaptcha/ringcaptcha-wordpress
+    official: true
+    notes: WordPress plugin.

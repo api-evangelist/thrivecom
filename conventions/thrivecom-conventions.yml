@@ -1,0 +1,50 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/ringcaptcha (official SDK source) + https://my.ringcaptcha.com/docs/web
+api_host: https://api.ringcaptcha.com
+path_style: /{app_key}/{endpoint}
+transport:
+  scheme: https
+  method: POST
+  request_content_type: application/x-www-form-urlencoded
+  response_content_type: application/json
+authentication:
+  style: api-key
+  keys: [app_key (path), api_key (form), secret_key (form)]
+  ref: authentication/thrivecom-authentication.yml
+verification_flow:
+  description: >-
+    A challenge-response one-time-passcode flow. (1) Obtain a session token via
+    the captcha endpoint; (2) send a code to the phone over SMS or voice, which
+    binds the code to the token; (3) verify the user-entered code against the
+    token.
+  steps:
+    - endpoint: /{app_key}/captcha
+      purpose: Issue a verification session `token` for a locale.
+    - endpoint: /{app_key}/normalize
+      purpose: Normalize a raw phone number to E.164 before sending a code.
+    - endpoint: /{app_key}/code/sms
+      purpose: Generate and deliver a pincode to the phone over SMS.
+    - endpoint: /{app_key}/code/voice
+      purpose: Generate and deliver a pincode to the phone over a voice call.
+    - endpoint: /{app_key}/verify
+      purpose: Verify the pincode entered by the user against the token.
+token_model:
+  field: token
+  description: >-
+    Returned by the captcha endpoint and threaded through code generation and
+    verification. The SDKs cache the most recent token from any response.
+pagination:
+  supported: false
+  notes: Endpoints are single-shot verification actions; no list/collection pagination.
+idempotency:
+  supported: false
+  notes: >-
+    No idempotency-key header or parameter is documented in the SDKs or docs.
+    Re-sending a code issues a new challenge.
+rate_limit_signaling:
+  documented: false
+error_envelope:
+  ref: errors/thrivecom-error-codes.yml
+  status_field: status
+  values: [SUCCESS, ERROR]

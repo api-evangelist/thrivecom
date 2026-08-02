@@ -1,0 +1,31 @@
+generated: '2026-07-21'
+method: derived
+source: >-
+  Derived from RingCaptcha SDK request/response fields (github.com/ringcaptcha:
+  ringcaptcha-python, ringcaptcha-node).
+entities:
+  - name: Application
+    description: A RingCaptcha app identified by app_key with api_key/secret_key credentials.
+    key_fields: [app_key, api_key, secret_key]
+  - name: VerificationToken
+    description: Session token issued by the captcha endpoint and threaded through code and verify.
+    key_fields: [token, locale]
+  - name: Verification
+    description: A single OTP challenge/verify result.
+    key_fields: [id, status, code, message]
+  - name: PhoneNumber
+    description: The phone being verified, with enrichment metadata returned on verify.
+    key_fields: [phone, phone_type, carrierName, device, isp, geolocation]
+relationships:
+  - from: Application
+    to: VerificationToken
+    type: has_many
+    via: app_key
+  - from: VerificationToken
+    to: Verification
+    type: has_many
+    via: token
+  - from: Verification
+    to: PhoneNumber
+    type: has_one
+    via: phone

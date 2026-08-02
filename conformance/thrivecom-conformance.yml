@@ -1,0 +1,20 @@
+generated: '2026-07-21'
+method: derived
+source: >-
+  Derived from RingCaptcha SDK auth model and homepage compliance claims
+  (ringcaptcha.com). GDPR compliance stated on the marketing site.
+standards:
+  - id: oauth2
+    conforms: false
+    evidence: API uses static app_key/api_key/secret_key credentials, not OAuth.
+  - id: oidc
+    conforms: false
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors use a custom {status, message, code} envelope, not application/problem+json.
+  - id: e164-phone-normalization
+    conforms: true
+    evidence: normalize endpoint returns E.164-formatted numbers.
+  - id: gdpr
+    conforms: true
+    evidence: RingCaptcha states GDPR compliance on ringcaptcha.com and its privacy policy.

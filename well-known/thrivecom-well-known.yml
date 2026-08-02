@@ -1,0 +1,18 @@
+generated: '2026-07-21'
+method: searched
+host: https://ringcaptcha.com
+notes: >-
+  All /.well-known/ paths on ringcaptcha.com return 301 to www.ringcaptcha.com,
+  which serves 404 for each. No well-known discovery documents are published.
+  api.ringcaptcha.com serves the REST API only.
+documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404

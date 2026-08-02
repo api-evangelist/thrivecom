@@ -1,0 +1,36 @@
+generated: '2026-07-21'
+method: searched
+source: 'https://github.com/ringcaptcha (official SDK source: ringcaptcha-node, ringcaptcha-python)'
+docs: https://my.ringcaptcha.com/docs/web
+summary:
+  types: [apiKey]
+  api_key_in: [body, path]
+  oauth2_flows: []
+  notes: >-
+    RingCaptcha uses static API-key credentials, not OAuth. Every request is
+    authenticated with a triplet of keys issued per application in the
+    dashboard: api_key and secret_key sent as form parameters, and app_key
+    embedded in the request path (/{app_key}/{endpoint}). Requests are
+    application/x-www-form-urlencoded over HTTPS to api.ringcaptcha.com.
+schemes:
+  - name: app_key
+    type: apiKey
+    in: path
+    description: >-
+      Per-application public key that identifies the RingCaptcha app; embedded
+      in the URL path as /{app_key}/{endpoint}.
+    sources: [ringcaptcha-node/lib/RingCaptcha.js, ringcaptcha-python/lib/Ringcaptcha.py]
+  - name: api_key
+    type: apiKey
+    in: body
+    parameter: api_key
+    description: Public application API key sent as a form field on most operations.
+    sources: [ringcaptcha-node/lib/Config.js]
+  - name: secret_key
+    type: apiKey
+    in: body
+    parameter: secret_key
+    description: >-
+      Server-side secret key sent as a form field on secured operations
+      (verify, captcha, sms) to authorize the request; never exposed client-side.
+    sources: [ringcaptcha-python/lib/Ringcaptcha.py, ringcaptcha-node/lib/Config.js]

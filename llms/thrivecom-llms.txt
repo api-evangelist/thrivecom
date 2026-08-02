@@ -1,0 +1,32 @@
+# RingCaptcha (ThriveCom)
+
+> RingCaptcha is a phone-verification and two-factor authentication (2FA) platform. It sends one-time passcodes over SMS, voice, WhatsApp and missed-call (Blink), normalizes and validates phone numbers, and scores fraud signals to block fake signups and spam leads. The REST API is served from api.ringcaptcha.com and authenticated with per-application api_key / secret_key / app_key credentials.
+
+## API
+- [RingCaptcha Verification API docs](https://my.ringcaptcha.com/docs/web): OTP send/verify, phone normalization, and fraud metadata over a form-encoded REST API at https://api.ringcaptcha.com/{app_key}/{endpoint}.
+- [Developer docs (Notion)](https://ringcaptcha.notion.site/Dev-Docs-e2af75c9765349848ad53c8601a8217f)
+
+## Operations
+- POST /{app_key}/captcha — issue a verification session token
+- POST /{app_key}/normalize — normalize a phone number to E.164
+- POST /{app_key}/code/sms — send an OTP over SMS
+- POST /{app_key}/code/voice — send an OTP over voice call
+- POST /{app_key}/verify — verify a user-entered pincode against a token
+
+## SDKs
+- [Node.js](https://github.com/ringcaptcha/ringcaptcha-node) / [npm: ringcaptcha](https://www.npmjs.com/package/ringcaptcha)
+- [Python](https://github.com/ringcaptcha/ringcaptcha-python)
+- [PHP](https://github.com/ringcaptcha/ringcaptcha-php)
+- [Ruby](https://github.com/ringcaptcha/ringcaptcha-ruby)
+- [C#](https://github.com/ringcaptcha/ringcaptcha-csharp)
+- [Android](https://github.com/ringcaptcha/ringcaptcha-android)
+- [iOS](https://github.com/ringcaptcha/ringcaptcha-ios)
+- [WordPress plugin](https://github.com/ringcaptcha/ringcaptcha-wordpress)
+
+## Docs
+- [GitHub organization](https://github.com/ringcaptcha)
+- [Blog](https://blog.ringcaptcha.com)
+- [Plans & Pricing](https://ringcaptcha.com/plans)
+- [Sign in / Sign up](https://my.ringcaptcha.com/login)
+- [Terms of Use](https://ringcaptcha.com/terms-of-use)
+- [Privacy Policy](https://ringcaptcha.com/privacy-policy)
