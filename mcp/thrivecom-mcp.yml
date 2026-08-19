@@ -1,25 +1,30 @@
 generated: '2026-07-21'
 method: derived
 status: candidate
-source: >-
-  Derived from RingCaptcha REST operations documented in the official SDKs
-  (github.com/ringcaptcha). No official hosted MCP server was found.
+source: Derived from RingCaptcha REST operations documented in the official SDKs (github.com/ringcaptcha).
+  No official hosted MCP server was found.
 server:
   name: ringcaptcha
   transport: http
 tools:
-  - name: get_verification_token
-    description: Issue a verification session token for a locale.
-    source_operation: POST https://api.ringcaptcha.com/{app_key}/captcha
-  - name: normalize_phone
-    description: Normalize a raw phone number to E.164 and return metadata.
-    source_operation: POST https://api.ringcaptcha.com/{app_key}/normalize
-  - name: send_sms_code
-    description: Generate and deliver a one-time pincode to a phone over SMS.
-    source_operation: POST https://api.ringcaptcha.com/{app_key}/code/sms
-  - name: send_voice_code
-    description: Generate and deliver a one-time pincode to a phone over a voice call.
-    source_operation: POST https://api.ringcaptcha.com/{app_key}/code/voice
-  - name: verify_code
-    description: Verify a user-entered pincode against a verification token.
-    source_operation: POST https://api.ringcaptcha.com/{app_key}/verify
+- name: get_verification_token
+  description: Issue a verification session token for a locale.
+  source_operation: POST https://api.ringcaptcha.com/{app_key}/captcha
+- name: normalize_phone
+  description: Normalize a raw phone number to E.164 and return metadata.
+  source_operation: POST https://api.ringcaptcha.com/{app_key}/normalize
+- name: send_sms_code
+  description: Generate and deliver a one-time pincode to a phone over SMS.
+  source_operation: POST https://api.ringcaptcha.com/{app_key}/code/sms
+- name: send_voice_code
+  description: Generate and deliver a one-time pincode to a phone over a voice call.
+  source_operation: POST https://api.ringcaptcha.com/{app_key}/code/voice
+- name: verify_code
+  description: Verify a user-entered pincode against a verification token.
+  source_operation: POST https://api.ringcaptcha.com/{app_key}/verify
+deployment:
+  mode: none
+  verified: derived
+  tools: 5
+  checked: '2026-08-12'
+  source: catalog MCP census
