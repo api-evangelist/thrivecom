@@ -1,4 +1,4 @@
-# ThriveCom
+# RingCaptcha (ThriveCom)
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,6 +64,99 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-ThriveCom is a company surfaced as a portfolio company of 500-global and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+RingCaptcha, operated by ThriveCom, is a phone-verification and two-factor authentication (2FA) platform that helps businesses confirm real users and block fraud. It delivers one-time passcodes over SMS, voice, WhatsApp and missed-call (Blink) verification, normalizes and validates phone numbers to E.164, and returns fraud, carrier and device metadata to filter fake signups, bots and spam leads. Developers integrate through a simple form-encoded REST API at api.ringcaptcha.com, authenticated with per-application api_key, secret_key and app_key credentials, plus official client SDKs for Node.js, Python, PHP, Ruby, C#, Android, iOS and WordPress. RingCaptcha was surfaced as a 500 Global portfolio company and profiled through the API Evangelist enrichment pipeline.
 
-Backed by: 500-global — https://ringcaptcha.com
+**Areas:** Company · Two-Factor Authentication · Phone Verification · One-Time Passcode · SMS · Voice · Fraud Prevention · Identity Verification · Authentication
+
+## RingCaptcha (ThriveCom) on APIs.io
+
+Everything profiled for RingCaptcha (ThriveCom) is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/thrivecom/](https://apis.io/providers/thrivecom/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [RingCaptcha Verification API](https://apis.io/apis/thrivecom/ringcaptcha-verification-api/) — Form-encoded REST API for phone verification and OTP: issue a session token, normalize a phone number, send a pincode over SMS or voice, and verify the…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [ringcaptcha](https://apis.io/servers/thrivecom/ringcaptcha/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Thrivecom Authentication](https://apis.io/security/thrivecom/thrivecom-authentication/)
+- [Thrivecom Domain Security](https://apis.io/security/thrivecom/thrivecom-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://ringcaptcha.com)
+- [Documentation](https://my.ringcaptcha.com/docs/web)
+- [API reference](https://ringcaptcha.notion.site/Dev-Docs-e2af75c9765349848ad53c8601a8217f)
+- [Pricing](https://ringcaptcha.com/plans)
+- [Sign up](https://my.ringcaptcha.com/login)
+- [Blog](https://blog.ringcaptcha.com)
+- [Compliance](https://ringcaptcha.com/privacy-policy)
+- [Terms of service](https://ringcaptcha.com/terms-of-use)
+- [Privacy policy](https://ringcaptcha.com/privacy-policy)
+- [GitHub](https://github.com/ringcaptcha)
+
+## API Evangelist rating
+
+**Kin Score 29.6** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 51.2 |
+| Access clarity | 52.6 |
+
+**Agent readiness 5.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 25.0** — Telecommunications
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/thrivecom/](https://apis.io/providers/thrivecom/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for RingCaptcha (ThriveCom): the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/thrivecom/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
